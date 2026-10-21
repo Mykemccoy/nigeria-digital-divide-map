@@ -83,11 +83,11 @@
             zoomControl:false, maxZoom:28, minZoom:1
         }).fitBounds([[3.6517050509132236,0.2741816843094673],[13.989890307043176,19.572547958624064]]);
 
-		// Add CartoDB Positron Basemap
-        var basemap0 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
-            maxZoom: 19
-        }).addTo(map);
+		// Add OpenStreetMap basemap
+		var basemap0 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   	 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    		maxZoom: 19
+		}).addTo(map);
 			
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
