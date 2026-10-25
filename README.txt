@@ -1,9 +1,5 @@
 # Spatial Risk Assessment of Urban Sprawl and Wetland Degradation in Low-Lying Lagos (2000–2025)
 
-<p align="center">
-  <img src="assets/lagos_spatial_risk_assessment_map.jpg" alt="Spatial Risk Assessment Map of Lagos State" width="100%">
-</p>
-
 ## Overview
 Rapid, unchecked urban expansion across Lagos State is increasingly encroaching upon low-lying floodplains and natural wetland buffers below 5 metres in elevation. This land-use transformation severely disrupts natural drainage pathways and degrades critical coastal ecosystems, dramatically amplifying the region's vulnerability to pluvial and coastal flooding.
 
