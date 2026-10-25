@@ -1,64 +1,45 @@
 # Spatial Risk Assessment of Urban Sprawl and Wetland Degradation in Low-Lying Lagos (2000–2025)
 
-## Overview
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Google Earth Engine](https://img.shields.io/badge/Google%20Earth%20Engine-Spatial%20Analysis-green.svg)](https://earthengine.google.com/)
+[![QGIS](https://img.shields.io/badge/QGIS-v3.x-blue.svg)](https://qgis.org/)
+
+## Project Summary
 Rapid, unchecked urban expansion across Lagos State is increasingly encroaching upon low-lying floodplains and natural wetland buffers below 5 metres in elevation. This land-use transformation severely disrupts natural drainage pathways and degrades critical coastal ecosystems, dramatically amplifying the region's vulnerability to pluvial and coastal flooding.
 
-This project integrates Earth Observation (EO) data and Geographic Information Systems (GIS) to identify critical spatial collision hotspots where 2000–2025 urban expansion directly overlaps with historical wetland baselines and low-lying elevation zones (≤5 m) across Lagos State.
+Using multi-temporal satellite classification (Landsat Surface Reflectance / ESA WorldCover) and JRC Global Surface Water baselines in Google Earth Engine alongside NASA SRTM topographic elevation rasters and OpenStreetMap vectors in QGIS, this study evaluates spatial collision hotspots where 2000–2025 urban expansion directly overlaps with historical wetland baselines and low-lying elevation zones ($\le 5\,\text{m}$) across Lagos State.
 
 ---
+## SPATIAL RISK ASSESSMENT MAP
+<p align="center">
+  <img src="LAGOS SPATIAL RISK ASSESSMENT MAP.jpg" alt="Spatial Risk Assessment Map of Urban Sprawl and Wetland Degradation in Low-Lying Lagos (2000-2025)" width="850"/>
+</p>
 
 ## Key Spatial Findings
 
-| Land Cover / Risk Class | Area ($\text{km}^2$) | Area Share (%) | Description & Risk Implication |
+| Class / Land Cover Category | Area ($\text{km}^2$) | Area Share (%) | Description & Risk Implication |
 |---|---|---|---|
-| **Low-Lying Zones ($\le 5\,\text{m}$)** | $1,671\,\text{km}^2$ | 49.0% | Inherent flood-prone baseline terrain across Lagos State. |
-| **Historical Wetlands (1984–2000)** | $784\,\text{km}^2$ | 23.0% | Baseline natural water and wetland retention buffers. |
-| **Urban Built-Up (2025)** | $930\,\text{km}^2$ | 27.0% | Extent of urban footprint after 25 years of expansion. |
-| **Collision Hotspots** | **$5.6\,\text{km}^2$** | **0.17%** | Acute direct overlap where human development has built over low-lying historical wetlands. |
+| **Low_Lying Zones ($\le 5\,\text{m}$)** | 1,671 | 49% | Inherently flood-prone terrain foundation under 5m elevation. |
+| **Historical Wetland (1984–2000)** | 784 | 23% | Natural water baselines and wetland buffers. |
+| **Urban Built Up (2025)** | 930 | 27% | Extent of urban footprint expanded along vulnerable lagoon corridors. |
+| **Collision Hotspots** | **5.6** | **0.17%** | Acute direct collision hotspots where human development built over low-lying historical wetlands. |
 
 ### Core Insights
-* **Extensive Hazard Footprint:** Low-lying zones under 5 metres account for **49% ($1,671\,\text{km}^2$)** of the total land area in Lagos State, creating an inherently flood-prone foundation.
-* **Aggressive Expansion:** Built-up urban areas grew to cover **27% ($930\,\text{km}^2$)** of the state by 2025, with significant growth encroaching along vulnerable lagoon corridors.
-* **Acute Collision Zones:** **$5.6\,\text{km}^2$ ($0.17\%$)** represents direct, critical collision hotspots where modern infrastructure severely obstructs historic natural drainage baselines.
+* **Extensive Hazard Footprint:** Low-lying zones under 5 metres account for **49% ($1,671\,\text{km}^2$)** of the total land area in Lagos State, creating an inherently flood-prone foundation[cite: 3].
+* **Aggressive Expansion:** Built-up urban areas grew to cover **27% ($930\,\text{km}^2$)** of the state by 2025, with significant growth encroaching along vulnerable lagoon corridors[cite: 3].
+* **Critical Collision Zones:** **$5.6\,\text{km}^2$ ($0.17\%$)** represents acute direct collision hotspots where human development has completely built over low-lying historical wetlands[cite: 3].
 
 ---
+## Methodology
+The methodology combines cloud-based multi-temporal remote sensing extraction with terrain thresholding and spatial raster calculator analysis:
 
-## Data Sources & Tools
-
-### Datasets
-* **Elevation & Topography ($\le 5\,\text{m}$):** NASA SRTM / Digital Elevation Model (DEM) via Google Earth Engine & QGIS.
-* **Historical Water Baseline (1984–2000):** JRC Global Surface Water Dataset via Google Earth Engine.
-* **Urban Built-Up Dynamics (2000–2025):** Multi-temporal satellite imagery (Landsat Surface Reflectance / ESA WorldCover) via Google Earth Engine.
-* **Infrastructure & Basemap:** OpenStreetMap (OSM) highway vector layers and basemap tiles.
-
-### Tech Stack
-* **Google Earth Engine (GEE):** Cloud-based multi-temporal data extraction, clipping, and classification.
-* **QGIS:** Topographic thresholding, spatial raster intersection, cartographic layout design, coordinate annotation (EPSG:4326), and spatial vector overlay.
-* **Microsoft Excel:** Statistical aggregation, area percentage calculations ($\text{km}^2$), and summary chart generation.
-
----
-
-## Methodology & Spatial Workflow
-
-1. **Data Extraction & Boundary Clipping:** Multi-temporal built-up rasters and JRC historical surface water baselines were extracted and clipped to the official Lagos State administrative boundary using GEE scripts.
-2. **Elevation Thresholding:** Topographic rasters (NASA SRTM) were filtered in QGIS to isolate all terrain falling below 5 metres above sea level.
-3. **Raster Intersection Analysis:** Executed a boolean spatial intersection query in QGIS Raster Calculator:
-   $$\text{Collision Hotspots} = (\text{Elevation} \le 5\text{m}) \cap (\text{Historical Wetland}) \cap (\text{Built-Up } 2025)$$
-4. **Area Quantification & Cartography:** Exported pixel class statistics to Excel for metric summaries, followed by layout composition in QGIS featuring coordinate grids, inset contextual maps, scale bars, and dynamic legends.
-
----
-
-## Project Structure
-
-```text
-├── assets/
-│   └── lagos_spatial_risk_assessment_map.jpg   # Final high-resolution map layout
-├── data/
-│   ├── raw/                                    # Raw GEE rasters and SRTM DEMs
-│   └── processed/                              # Filtered layers and collision rasters
-├── scripts/
-│   ├── gee_data_extraction.js                  # GEE script for Landsat & JRC extraction
-│   └── raster_intersection.py                  # QGIS Python/PyQGIS processing script
-├── docs/
-│   └── Lagos_Flood_Mapping_Submission_Summary.pdf # Detailed project summary
-└── README.md
+```mermaid
+graph TD;
+    A[NASA SRTM DEM / Topography] --> B[Elevation Thresholding in QGIS: Elevation <= 5m];
+    C[JRC Global Surface Water 1984-2000] --> D[Extract Historical Wetland Baseline in GEE];
+    E[Landsat / ESA WorldCover 2000-2025] --> F[Multi-Temporal Built-Up Classification in GEE];
+    B --> G[Raster Intersection Analysis in QGIS Raster Calculator];
+    D --> G;
+    F --> G;
+    G --> H[High-Risk Collision Hotspot Extraction];
+    H --> I[Class Area Quantification & Percentage Summaries in Excel];
