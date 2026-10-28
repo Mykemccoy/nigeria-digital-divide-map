@@ -33,14 +33,14 @@ The maps synthesize state-level internet download speeds, spatial hotspots, and 
 ## MAPPING NIGERIA'S DIGITAL DIVIDE THROUGH GEOSPATIAL DATA
 
 <p align="center">
-  <img src="BASELINE MAP.png" alt="Mapping Nigeria's Digital Divide Through Geospatial Data" width="850"/>
+  <img src="BASELINE MAP.png" alt="Mapping Nigeria's Digital Divide Through Geospatial Data" width="1050"/>
 </p>
 
 ---
 
 ## 🌐 Interactive Web Dashboard
 Explore the live, interactive multi-layer web application:
-🔗 **[Access the Live Interactive Map Here](https://mykemccoy.github.io/nigeria-digital-divide-map/#6/13.154/6.471)**[cite: 11]
+🔗 **[Access the Live Interactive Map Here](https://mykemccoy.github.io/nigeria-digital-divide-map/#6/13.154/6.471)**
 
 * **Multi-Layer Toggle:** Switch seamlessly between State and Local Government level layers.
 * **Advanced Search:** Use the search utility to locate precise states or LGAs instantly.
