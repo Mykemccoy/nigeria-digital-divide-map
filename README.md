@@ -33,7 +33,7 @@ The maps synthesize state-level internet download speeds, spatial hotspots, and 
 ## MAPPING NIGERIA'S DIGITAL DIVIDE THROUGH GEOSPATIAL DATA
 
 <p align="center">
-  <img src="BASELINE MAP.png" alt="Mapping Nigeria's Digital Divide Through Geospatial Data" width="1050"/>
+  <img src="BASELINE MAP.png" alt="Mapping Nigeria's Digital Divide Through Geospatial Data" width="1550"/>
 </p>
 
 ---
