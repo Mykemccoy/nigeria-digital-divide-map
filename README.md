@@ -33,16 +33,8 @@ The maps synthesize state-level internet download speeds, spatial hotspots, and 
 ## MAPPING NIGERIA'S DIGITAL DIVIDE THROUGH GEOSPATIAL DATA
 
 <p align="center">
-  <img src="LAGOS SPATIAL RISK ASSESSMENT MAP.png" alt="Spatial Risk Assessment Map of Urban Sprawl and Wetland Degradation in Low-Lying Lagos (2000-2025)" width="850"/>
+  <img src="BASELINE MAP.png" alt="Mapping Nigeria's Digital Divide Through Geospatial Data" width="850"/>
 </p>
-
-LAGOS SPATIAL RISK ASSESSMENT MAP.png
----
-
-
-![Mapping Nigeria's Digital Divide Through Geospatial Data](Assessment%20of%20Broadband%20Performance%20(TEAM%20MAACs).pdf) <!-- Alternatively, if your image is saved in the repo as an image file like assets/map.png, use: ![Synthesis Map](assets/map.png) -->
-
-> **Figure 1:** State-level synthesis of download speed, spatial hotspot values, population exposure, digital equity priority, and data coverage.
 
 ---
 
