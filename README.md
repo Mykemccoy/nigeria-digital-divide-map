@@ -12,10 +12,10 @@
 ---
 
 ## 👥 Authors (TEAM MAACs)
-* **Ayewa Olanrewaju Michael** (`DSN/Bot/26/0759`)
-* **Clinton Hickson Eyyammeh** (`DSN/Bot/26/0181`)
-* **Owolabi Abdulquawiyy Adisa** (`DSN/Bot/26/0352`)
-* **Awwal Abdulwahab** (`DSN/Bot/26/0613`)
+* **Ayewa Olanrewaju Michael**
+* **Clinton Hickson Eyyammeh** 
+* **Owolabi Abdulquawiyy Adisa** 
+* **Awwal Abdulwahab**
 
 ---
 
@@ -26,6 +26,19 @@ This project uses the Ookla internet performance dataset and supporting populati
 
 ## 📊 Executive Synthesis Map Atlas
 The maps synthesize state-level internet download speeds, spatial hotspots, and socioeconomic data into a unified **Digital Equity Priority Index (DEPI)** to guide broadband infrastructure investment across Nigeria.
+
+
+---
+
+## MAPPING NIGERIA'S DIGITAL DIVIDE THROUGH GEOSPATIAL DATA
+
+<p align="center">
+  <img src="LAGOS SPATIAL RISK ASSESSMENT MAP.png" alt="Spatial Risk Assessment Map of Urban Sprawl and Wetland Degradation in Low-Lying Lagos (2000-2025)" width="850"/>
+</p>
+
+LAGOS SPATIAL RISK ASSESSMENT MAP.png
+---
+
 
 ![Mapping Nigeria's Digital Divide Through Geospatial Data](Assessment%20of%20Broadband%20Performance%20(TEAM%20MAACs).pdf) <!-- Alternatively, if your image is saved in the repo as an image file like assets/map.png, use: ![Synthesis Map](assets/map.png) -->
 
