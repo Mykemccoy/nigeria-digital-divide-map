@@ -1,45 +1,71 @@
-# Spatial Risk Assessment of Urban Sprawl and Wetland Degradation in Low-Lying Lagos (2000–2025)
+# Mapping Nigeria's Digital Divide Through Geospatial Data
+### State-Level Synthesis of Broadband Performance, Spatial Statistics, and Digital Equity Priorities
 
+<div align="center">
+
+[![Live Interactive Map](https://img.shields.io/badge/🌍_Live_Interactive_Map-Explore_Atlas-blue?style=for-the-badge)](https://mykemccoy.github.io/nigeria-digital-divide-map/#6/13.154/6.471)
+[![QGIS](https://img.shields.io/badge/Powered_by-QGIS_%7C_Leaflet-green?style=for-the-badge)](https://qgis.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Google Earth Engine](https://img.shields.io/badge/Google%20Earth%20Engine-Spatial%20Analysis-green.svg)](https://earthengine.google.com/)
-[![QGIS](https://img.shields.io/badge/QGIS-v3.x-blue.svg)](https://qgis.org/)
 
-## Project Summary
-Rapid, unchecked urban expansion across Lagos State is increasingly encroaching upon low-lying floodplains and natural wetland buffers below 5 metres in elevation. This land-use transformation severely disrupts natural drainage pathways and degrades critical coastal ecosystems, dramatically amplifying the region's vulnerability to pluvial and coastal flooding.
-
-Using multi-temporal satellite classification (Landsat Surface Reflectance / ESA WorldCover) and JRC Global Surface Water baselines in Google Earth Engine alongside NASA SRTM topographic elevation rasters and OpenStreetMap vectors in QGIS, this study evaluates spatial collision hotspots where 2000–2025 urban expansion directly overlaps with historical wetland baselines and low-lying elevation zones ($\le 5\,\text{m}$) across Lagos State.
+</div>
 
 ---
-## SPATIAL RISK ASSESSMENT MAP
-<p align="center">
-  <img src="LAGOS SPATIAL RISK ASSESSMENT MAP.jpg" alt="Spatial Risk Assessment Map of Urban Sprawl and Wetland Degradation in Low-Lying Lagos (2000-2025)" width="850"/>
-</p>
 
-## Key Spatial Findings
-
-| Class / Land Cover Category | Area ($\text{km}^2$) | Area Share (%) | Description & Risk Implication |
-|---|---|---|---|
-| **Low_Lying Zones ($\le 5\,\text{m}$)** | 1,671 | 49% | Inherently flood-prone terrain foundation under 5m elevation. |
-| **Historical Wetland (1984–2000)** | 784 | 23% | Natural water baselines and wetland buffers. |
-| **Urban Built Up (2025)** | 930 | 27% | Extent of urban footprint expanded along vulnerable lagoon corridors. |
-| **Collision Hotspots** | **5.6** | **0.17%** | Acute direct collision hotspots where human development built over low-lying historical wetlands. |
-
-### Core Insights
-* **Extensive Hazard Footprint:** Low-lying zones under 5 metres account for **49% ($1,671\,\text{km}^2$)** of the total land area in Lagos State, creating an inherently flood-prone foundation[cite: 3].
-* **Aggressive Expansion:** Built-up urban areas grew to cover **27% ($930\,\text{km}^2$)** of the state by 2025, with significant growth encroaching along vulnerable lagoon corridors[cite: 3].
-* **Critical Collision Zones:** **$5.6\,\text{km}^2$ ($0.17\%$)** represents acute direct collision hotspots where human development has completely built over low-lying historical wetlands[cite: 3].
+## 👥 Authors (TEAM MAACs)
+* **Ayewa Olanrewaju Michael** (`DSN/Bot/26/0759`)[cite: 11]
+* **Clinton Hickson Eyyammeh** (`DSN/Bot/26/0181`)[cite: 11]
+* **Owolabi Abdulquawiyy Adisa** (`DSN/Bot/26/0352`)[cite: 11]
+* **Awwal Abdulwahab** (`DSN/Bot/26/0613`)[cite: 11]
 
 ---
-## Methodology
-The methodology combines cloud-based multi-temporal remote sensing extraction with terrain thresholding and spatial raster calculator analysis:
 
-```mermaid
-graph TD;
-    A[NASA SRTM DEM / Topography] --> B[Elevation Thresholding in QGIS: Elevation <= 5m];
-    C[JRC Global Surface Water 1984-2000] --> D[Extract Historical Wetland Baseline in GEE];
-    E[Landsat / ESA WorldCover 2000-2025] --> F[Multi-Temporal Built-Up Classification in GEE];
-    B --> G[Raster Intersection Analysis in QGIS Raster Calculator];
-    D --> G;
-    F --> G;
-    G --> H[High-Risk Collision Hotspot Extraction];
-    H --> I[Class Area Quantification & Percentage Summaries in Excel];
+## 🗺️ Project Overview
+This project uses the Ookla internet performance dataset and supporting population and socioeconomic data to examine how internet performance varies across Nigeria[cite: 11]. The aim is to identify states where weak observed connectivity overlaps with population exposure or socioeconomic need, while distinguishing areas with poor performance from areas where the available data are limited[cite: 11]. The results provide a spatial basis for deciding where further connectivity assessment and investment should be considered[cite: 11].
+
+---
+
+## 📊 Executive Synthesis Map Atlas
+The maps synthesize state-level internet download speeds, spatial hotspots, and socioeconomic data into a unified **Digital Equity Priority Index (DEPI)** to guide broadband infrastructure investment across Nigeria[cite: 10, 11].
+
+![Mapping Nigeria's Digital Divide Through Geospatial Data](Assessment%20of%20Broadband%20Performance%20(TEAM%20MAACs).pdf) <!-- Alternatively, if your image is saved in the repo as an image file like assets/map.png, use: ![Synthesis Map](assets/map.png) -->
+
+> **Figure 1:** State-level synthesis of download speed, spatial hotspot values, population exposure, digital equity priority, and data coverage[cite: 11].
+
+---
+
+## 🌐 Interactive Web Dashboard
+Explore the live, interactive multi-layer web application:
+🔗 **[Access the Live Interactive Map Here](https://mykemccoy.github.io/nigeria-digital-divide-map/#6/13.154/6.471)**[cite: 11]
+
+* **Multi-Layer Toggle:** Switch seamlessly between State and Local Government level layers[cite: 11].
+* **Advanced Search:** Use the search utility to locate precise states or LGAs instantly[cite: 11].
+* **Dynamic Popups:** Click or hover over any region to inspect download speeds, upload rates, latency, observation counts, population, priority class, and data-quality status[cite: 11].
+
+---
+
+## 🔍 Key Findings from the Map
+* **Significant Regional Disparity:** Connectivity varies significantly by location. The download-speed map shows a mix of severe- and moderate-deficit classes across several states, while higher-speed classes are found in fewer areas[cite: 11]. Consequently, a national average would obscure important regional differences[cite: 11].
+* **Multidimensional Need:** Need cannot be assessed by download speed alone. The population-exposure layer distinguishes areas where high connectivity deficits coincide with large populations from those where they overlap with high poverty levels, supporting a comprehensive assessment of vulnerability[cite: 11].
+* **Data Availability & Measurement Silence:** Ookla observations are unevenly distributed across states, so areas with limited coverage should be prioritized for additional data collection rather than interpreted as locations without internet service[cite: 11].
+
+---
+
+## ⚙️ Spatial Assessment & Methodology
+The state-level maps compare download speed, display the spatial statistic used for hotspot analysis ($Gi^*$), group population exposure, rank digital equity priorities, and show the distribution of data coverage[cite: 11]. 
+
+The **Digital Equity Priority Index (DEPI)** combines connectivity deficit (50%), population (30%), and poverty (20%) after inputs are normalized on a common 0–100 scale[cite: 11]. Hotspot results should be interpreted as statistically significant only where the relevant $Gi^*$ significance test supports that conclusion[cite: 11].
+
+---
+
+## 💡 Recommended Actions
+1. **Validate Priority Areas:** Cross-check states in the highest DEPI class with current coverage information, operator data, and local evidence before selecting locations for intervention[cite: 11].
+2. **Investigate Overlapping Need:** Give focused attention to areas where poor observed speeds coincide with high population exposure or poverty, rather than allocating resources based on download speed alone[cite: 11].
+3. **Improve Evidence in Data-Poor Areas:** Review states with limited Ookla observations and seek additional operator, regulator, or field data before drawing conclusions about service quality[cite: 11].
+4. **Use Results for Strategic Planning:** Assess feasible options such as network upgrades, additional backhaul, new infrastructure, or shared-access facilities only after local coverage, demand, and cost checks[cite: 11].
+
+---
+
+## ⚠️ Deliverables and Limitations
+The primary output is a state-level synthesis map supported by underlying download-speed, hotspot, population-exposure, DEPI, and data-coverage layers[cite: 11]. 
+
+The analysis is observational and subject to several limitations: Ookla speed tests may not represent every resident or network, population and poverty datasets may differ in reference year and spatial resolution, and state-level summaries may conceal internal local variations[cite: 11]. Furthermore, Ookla data were unavailable for more than one-third of Nigeria's local government areas, which limited deep in-depth assessment at the LGA level[cite: 11].
